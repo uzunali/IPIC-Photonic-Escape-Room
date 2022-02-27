@@ -186,12 +186,12 @@ class Photonics_Escape_Room():
             self.Warning_Window()
 
         if(self.passcode_status):
-            message = Label(self.frame,text=" UPLOAD of WiVirus HAS STOPED ",fg="black",bd = 5,font=("Times",16))
+            message = Label(self.frame,text=" UPLOAD of WiVirus HAS TERMINATED ",fg="black",bd = 5,font=("Times",16))
             message.grid(row=4, column=2, columnspan=4,sticky=EW)
             message.config({"background": "Green"})
 
         else:
-            message = Label(self.frame,text=" PASSWORD IS NOT CORRECT ",fg="black",bd = 5,font=("Times",16))
+            message = Label(self.frame,text=" CODE in RED COLORED BOX IS NOT CORRECT !! ",fg="black",bd = 5,font=("Times",16))
             message.grid(row=4, column=2, columnspan=4,sticky=EW)
             message.config({"background": "Red"})
         self.message = [message]
