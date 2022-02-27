@@ -15,7 +15,7 @@ frame1 = Frame(root)
 top_label = Label(frame1,text=" PHOTONIC ESCAPE ROOM ",fg="black",font=("Times",40))
 top_label.grid(row=0, column=0, columnspan=8,sticky=EW)
 
-image = ImageTk.PhotoImage(Image.open("IPIC/ipic.png"))
+image = ImageTk.PhotoImage(Image.open("logo/ipic.png"))
         
 label = ttk.Label(frame1,image=image,width=50)
 label.photo = image   # assign to class variable to resolve problem with bug in `PhotoImage`
@@ -23,7 +23,7 @@ label.photo = image   # assign to class variable to resolve problem with bug in 
 label.grid(row=1, column=0, columnspan=4,sticky=E)
 
 
-image = ImageTk.PhotoImage(Image.open("IPIC/tyndall.png"))
+image = ImageTk.PhotoImage(Image.open("logo/tyndall.png"))
         
 label = ttk.Label(frame1,image=image,width=50 )
 #label.config(width=40)

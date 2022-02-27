@@ -27,14 +27,14 @@ class Photonics_Escape_Room():
         self.frame.pack(fill=BOTH, expand=True)
 
         # IPIC logo
-        image = ImageTk.PhotoImage(Image.open("IPIC/ipic.png"))       
+        image = ImageTk.PhotoImage(Image.open("logo/ipic.png"))       
         label = ttk.Label(self.frame, image=image, width=50 )
         label.photo = image   # assign to class variable to resolve problem with bug in `PhotoImage`
 
         label.grid(row=1, column=0, columnspan=4,sticky=EW)
 
         #Tyndall Logo
-        image = ImageTk.PhotoImage(Image.open("IPIC/tyndall.png"))
+        image = ImageTk.PhotoImage(Image.open("logo/tyndall.png"))
         label = ttk.Label(self.frame, image=image, width=50 )
         #label.config(width=40)
         label.photo = image   # assign to class variable to resolve problem with bug in `PhotoImage`
@@ -191,7 +191,7 @@ class Photonics_Escape_Room():
             message.config({"background": "Green"})
 
         else:
-            message = Label(self.frame,text=" CODE in RED COLORED BOX IS NOT CORRECT !! ",fg="black",bd = 5,font=("Times",16))
+            message = Label(self.frame,text=" CODE in RED BOX IS NOT CORRECT !! ",fg="black",bd = 5,font=("Times",16))
             message.grid(row=4, column=2, columnspan=4,sticky=EW)
             message.config({"background": "Red"})
         self.message = [message]
