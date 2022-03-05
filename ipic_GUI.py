@@ -25,6 +25,7 @@ class Photonics_Escape_Room():
         self.passcode_checklist = {"D1":None,"D2":None,"D3":None,"D4":None,"D5":None,"D6":None}
         self.passcode_status = None
         self.message = []
+        self.initial_message = " ENTER YOUR CODE! "
 
         self.test = 0
 
@@ -49,6 +50,12 @@ class Photonics_Escape_Room():
         label.grid(row=0, column=1, columnspan=8,rowspan=1,padx=(40, 0), sticky=EW)
 
         self.Ebox()
+
+        message = Label(self.frame,text = self.initial_message,fg="black",bd = 5,font=("Times",16))
+        #message = Label(self.frame,text=" ",fg="black",bd = 5,font=("Times",16))
+
+        message.grid(row=4, column=2, columnspan=4,sticky=EW)
+        message.config({"background": "White"})
 
         add = Button(self.frame,text= "STOP UPLOAD",font=("Times",18, BOLD),fg="blue",bd = 5, height= 3, width=10, command=self.Enter)
         add.grid(row=3,column=3,columnspan=2,sticky=EW)
@@ -171,10 +178,16 @@ class Photonics_Escape_Room():
             #print(s)
         #self.message.config({"background": "White"})
         self.passcode_status = None
-        try:
-            self.message[0].destroy()
-        except:
-            pass
+        #try:
+        self.message[0].destroy()
+        message = Label(self.frame,text = self.initial_message,fg="black",bd = 5,font=("Times",16))
+        #message = Label(self.frame,text=" ",fg="black",bd = 5,font=("Times",16))
+        message.grid(row=4, column=2, columnspan=4,sticky=EW)
+        message.config({"background": "White"})
+        #message.destroy()
+        print("Reset Done")
+        #except:
+        #    pass
         
     
     def Passcode_Check(self):
